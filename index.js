@@ -1,18 +1,11 @@
 function isPalindrome(word) {
-
-  const string = 'madam?'
-  const len = string.length;
-  for (let i = 0; i < len / 2; i++) {
-
-    if (string[i] !== string[len - 1 - i]) {
-      return 'false';
-    }
-  }
-  return 'true';
+  const reversedWord = reverseString(word);
+  return word === reversedWord;
 }
-
-isPalindrome("madam")
-console.log(isPalindrome("madam"));
+function reverseString(word) {
+  return word.split("").reverse().join("");
+}
+console.log(isPalindrome('abba'))
 
 
 /* 
